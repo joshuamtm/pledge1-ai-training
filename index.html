@@ -41,15 +41,16 @@
         .slide {
             width: 90%;
             max-width: 1200px;
-            height: 90vh;
+            height: 85vh;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            padding: 60px;
+            padding: 50px 60px;
             display: none;
             flex-direction: column;
             animation: slideIn 0.5s ease-out;
-            overflow-y: auto;
+            overflow: hidden;
+            position: relative;
         }
 
         .slide.active {
@@ -69,32 +70,32 @@
 
         h1 {
             color: var(--navy);
-            font-size: 3em;
-            margin-bottom: 30px;
+            font-size: 2.5em;
+            margin-bottom: 25px;
             font-weight: 700;
             line-height: 1.2;
         }
 
         h2 {
             color: var(--navy);
-            font-size: 2.2em;
-            margin-bottom: 25px;
-            margin-top: 30px;
-            font-weight: 600;
-        }
-
-        h3 {
-            color: var(--turquoise);
-            font-size: 1.8em;
+            font-size: 1.9em;
             margin-bottom: 20px;
             margin-top: 25px;
             font-weight: 600;
         }
 
+        h3 {
+            color: var(--turquoise);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
         p {
-            font-size: 1.3em;
-            line-height: 1.7;
-            margin-bottom: 20px;
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin-bottom: 15px;
             color: var(--dark-gray);
         }
 
@@ -104,9 +105,9 @@
         }
 
         li {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin-bottom: 12px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
             color: var(--dark-gray);
         }
 
@@ -171,11 +172,15 @@
 
         .logo {
             position: absolute;
-            top: 30px;
-            right: 40px;
+            top: 20px;
+            right: 30px;
             font-weight: 700;
             color: var(--navy);
-            font-size: 1.2em;
+            font-size: 1em;
+            z-index: 10;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         .logo .moment {
@@ -185,18 +190,18 @@
         .compas-visual {
             display: flex;
             justify-content: space-around;
-            margin: 40px 0;
+            margin: 30px 0;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
         }
 
         .compas-item {
             flex: 1;
-            min-width: 150px;
+            min-width: 130px;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: var(--beige);
-            border-radius: 15px;
+            border-radius: 12px;
             transition: transform 0.3s ease;
         }
 
@@ -206,14 +211,14 @@
         }
 
         .compas-letter {
-            font-size: 3em;
+            font-size: 2.5em;
             color: var(--turquoise);
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .compas-word {
-            font-size: 1.3em;
+            font-size: 1.1em;
             color: var(--navy);
             font-weight: 600;
         }
@@ -221,16 +226,16 @@
         .demo-box {
             background: var(--beige);
             border-left: 4px solid var(--turquoise);
-            padding: 25px;
-            margin: 30px 0;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 10px;
         }
 
         .demo-title {
             color: var(--navy);
             font-weight: 700;
-            font-size: 1.3em;
-            margin-bottom: 15px;
+            font-size: 1.15em;
+            margin-bottom: 12px;
         }
 
         .code-block {
@@ -247,19 +252,21 @@
         .prompt-example {
             background: linear-gradient(135deg, var(--beige) 0%, #fff 100%);
             border: 2px solid var(--turquoise);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            margin: 20px 0;
+            margin: 15px 0;
+            font-size: 0.95em;
         }
 
         .workflow-step {
             display: flex;
             align-items: center;
-            margin: 20px 0;
-            padding: 15px;
+            margin: 15px 0;
+            padding: 12px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            font-size: 1.05em;
         }
 
         .step-number {
@@ -289,17 +296,27 @@
 
         .moth-story {
             background: linear-gradient(135deg, #fff4e6 0%, #fff 100%);
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
-            margin: 30px 0;
+            margin: 20px 0;
             border: 2px solid var(--warm-yellow);
         }
 
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow: hidden;
+        }
+
         @media (max-width: 768px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.6em; }
-            p { font-size: 1.1em; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            h3 { font-size: 1.2em; }
+            p { font-size: 1em; }
             .slide { padding: 30px; }
+            .logo { font-size: 0.9em; }
         }
     </style>
 </head>
@@ -394,7 +411,7 @@
         </div>
     </div>
 
-    <!-- Slide 5: Context -->
+    <!-- Slide 5: Context Part 1 -->
     <div class="slide" id="slide-5">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>C - Context: Understanding Your Landscape</h1>
@@ -403,20 +420,33 @@
             <p>ED of statewide advocacy org: "My staff are using bots and I think I'm going to jail!"</p>
             <p style="margin-top: 15px;"><strong>The real context:</strong> Staff using AI without policies, training, or shared vocabulary</p>
         </div>
-        <h3>Context Gathering for Your Organization</h3>
+        <h3>Key Questions for Context Gathering</h3>
         <ul>
             <li>What AI tools is your team already using (officially and unofficially)?</li>
             <li>What problems are they trying to solve?</li>
             <li>What are your compliance and security requirements?</li>
             <li>What's your team's technical comfort level?</li>
         </ul>
-        <div class="prompt-example">
-            <p><strong>Context-Gathering Prompt:</strong></p>
-            <p style="font-style: italic; margin-top: 10px;">"Help me map out all the ways my team might already be using AI tools, both officially and unofficially, and what problems they're trying to solve. Tell me all the information that might be helpful in understanding this and how I can best provide you with this information."</p>
-        </div>
     </div>
 
-    <!-- Slide 6: Objective -->
+    <!-- Slide 6: Context Part 2 -->
+    <div class="slide" id="slide-6">
+        <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
+        <h1>Context Gathering Prompt</h1>
+        <div class="prompt-example">
+            <p><strong>Use this prompt to understand your organization's AI landscape:</strong></p>
+            <p style="font-style: italic; margin-top: 15px;">"Help me map out all the ways my team might already be using AI tools, both officially and unofficially, and what problems they're trying to solve. Tell me all the information that might be helpful in understanding this and how I can best provide you with this information."</p>
+        </div>
+        <h3>What You'll Discover</h3>
+        <ul>
+            <li>Hidden AI usage across departments</li>
+            <li>Common pain points and opportunities</li>
+            <li>Security and compliance gaps</li>
+            <li>Training needs and skill levels</li>
+        </ul>
+    </div>
+
+    <!-- Slide 7: Objective -->
     <div class="slide" id="slide-6">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>O - Objective: Define the ACTUAL Problem</h1>
@@ -438,7 +468,7 @@
         </ul>
     </div>
 
-    <!-- Slide 7: Method -->
+    <!-- Slide 8: Method -->
     <div class="slide" id="slide-7">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>M - Method: Your Implementation Plan</h1>
@@ -476,8 +506,8 @@
         </div>
     </div>
 
-    <!-- Slide 8: PTCF Framework -->
-    <div class="slide" id="slide-8">
+    <!-- Slide 9: PTCF Framework Part 1 -->
+    <div class="slide" id="slide-9">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Advanced Prompting: The PTCF Method</h1>
         <h3>Transform OK prompts into BEST prompts</h3>
@@ -485,34 +515,45 @@
             <div class="compas-item">
                 <div class="compas-letter">P</div>
                 <div class="compas-word">Persona</div>
-                <p style="font-size: 0.9em; margin-top: 10px;">Who should AI be?</p>
+                <p style="font-size: 0.85em; margin-top: 8px;">Who should AI be?</p>
             </div>
             <div class="compas-item">
                 <div class="compas-letter">T</div>
                 <div class="compas-word">Task</div>
-                <p style="font-size: 0.9em; margin-top: 10px;">What needs doing?</p>
+                <p style="font-size: 0.85em; margin-top: 8px;">What needs doing?</p>
             </div>
             <div class="compas-item">
                 <div class="compas-letter">C</div>
                 <div class="compas-word">Context</div>
-                <p style="font-size: 0.9em; margin-top: 10px;">Background info</p>
+                <p style="font-size: 0.85em; margin-top: 8px;">Background info</p>
             </div>
             <div class="compas-item">
                 <div class="compas-letter">F</div>
                 <div class="compas-word">Format</div>
-                <p style="font-size: 0.9em; margin-top: 10px;">How to present it</p>
+                <p style="font-size: 0.85em; margin-top: 8px;">How to present it</p>
             </div>
         </div>
-        <div class="prompt-example">
+        <div class="demo-box">
             <p><strong>OK Prompt:</strong> "Write a grant report"</p>
-            <p style="margin-top: 20px;"><strong>BEST PTCF Prompt:</strong></p>
-            <p style="font-style: italic; margin-top: 10px;">
-            "Act as a grant writing specialist for nonprofit organizations (P). Create a quarterly impact report for our youth mentorship program (T). We served 150 at-risk youth this quarter with 85% showing improved academic performance and 90% regular attendance (C). Format as a 2-page executive summary with bullet points for key metrics, narrative sections for success stories, and a data visualization section. Use accessible language at an 8th-grade reading level (F). Please ask me 3 clarifying questions before you begin."
-            </p>
+            <p><strong>Problem:</strong> Too vague, no context, unclear format</p>
         </div>
     </div>
 
-    <!-- Slide 9: Building Packages -->
+    <!-- Slide 10: PTCF Framework Part 2 -->
+    <div class="slide" id="slide-10">
+        <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
+        <h1>PTCF Example: Grant Report</h1>
+        <div class="prompt-example">
+            <p><strong>BEST PTCF Prompt:</strong></p>
+            <p style="font-style: italic; margin-top: 10px;">
+            "Act as a grant writing specialist for nonprofit organizations <strong>(P)</strong>. Create a quarterly impact report for our youth mentorship program <strong>(T)</strong>. We served 150 at-risk youth this quarter with 85% showing improved academic performance and 90% regular attendance <strong>(C)</strong>. Format as a 2-page executive summary with bullet points for key metrics, narrative sections for success stories, and a data visualization section. Use accessible language at an 8th-grade reading level <strong>(F)</strong>. Please ask me 3 clarifying questions before you begin."
+            </p>
+        </div>
+        <h3>Pro Tip</h3>
+        <p>Always end with: "Please ask me 3 clarifying questions before you begin"</p>
+    </div>
+
+    <!-- Slide 11: Building Packages -->
     <div class="slide" id="slide-9">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>From Prompt to Package</h1>
@@ -543,7 +584,7 @@
         </div>
     </div>
 
-    <!-- Slide 10: Use Case - Grant Review -->
+    <!-- Slide 12: Use Case - Grant Review -->
     <div class="slide" id="slide-10">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Use Case: Automated Grant Review</h1>
@@ -576,7 +617,7 @@
         </div>
     </div>
 
-    <!-- Slide 11: Vibe Coding -->
+    <!-- Slide 13: Vibe Coding -->
     <div class="slide" id="slide-11">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Vibe Coding: Your Organizational Voice</h1>
@@ -607,7 +648,7 @@
         </div>
     </div>
 
-    <!-- Slide 12: Guardrails -->
+    <!-- Slide 14: Guardrails -->
     <div class="slide" id="slide-12">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Essential Guardrails</h1>
@@ -653,17 +694,16 @@
         </div>
     </div>
 
-    <!-- Slide 13: Hands-On Exercise -->
-    <div class="slide" id="slide-13">
+    <!-- Slide 15: Hands-On Exercise Part 1 -->
+    <div class="slide" id="slide-15">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Your Turn: Build Your First Package</h1>
-        
         <h3>15-Minute Exercise</h3>
         <div class="workflow-step">
             <div class="step-number">1</div>
             <div>
                 <strong>Pick Your Micro-Workflow</strong> (2 min)<br>
-                Examples: Meeting notes → action items, Survey responses → insights, Email drafts
+                Examples: Meeting notes → action items, Survey responses → insights
             </div>
         </div>
         <div class="workflow-step">
@@ -673,6 +713,12 @@
                 Include Persona, Task, Context, and Format
             </div>
         </div>
+    </div>
+
+    <!-- Slide 16: Hands-On Exercise Part 2 -->
+    <div class="slide" id="slide-16">
+        <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
+        <h1>Complete Your Package</h1>
         <div class="workflow-step">
             <div class="step-number">3</div>
             <div>
@@ -687,14 +733,13 @@
                 Try it with real content and refine
             </div>
         </div>
-        
         <div class="demo-box">
             <div class="demo-title">Share & Learn</div>
             <p>Post in chat: What workflow did you choose and why?</p>
         </div>
     </div>
 
-    <!-- Slide 14: Performance & Assessment -->
+    <!-- Slide 17: Performance & Assessment -->
     <div class="slide" id="slide-14">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>P & A: Performance and Assessment</h1>
@@ -727,7 +772,7 @@
         </ul>
     </div>
 
-    <!-- Slide 15: Super You -->
+    <!-- Slide 18: Super You -->
     <div class="slide" id="slide-15">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>S - Super You: The Journey Continues</h1>
@@ -756,7 +801,7 @@
         </p>
     </div>
 
-    <!-- Slide 16: Resources & Next Steps -->
+    <!-- Slide 19: Resources & Next Steps -->
     <div class="slide" id="slide-16">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Resources & Next Steps</h1>
@@ -787,57 +832,57 @@
         Email: <span class="accent">team@mtm.now</span></p>
     </div>
 
-    <!-- Slide 17: How We Made This -->
-    <div class="slide" id="slide-17">
+    <!-- Slide 20: How We Made This Part 1 -->
+    <div class="slide" id="slide-20">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Meta Moment: How We Created This Deck</h1>
         <h3>Using AI to Teach AI <span class="ai-badge">Claude Code</span></h3>
-        
-        <div class="moth-story">
-            <p><strong>The COMPAS Process in Action:</strong></p>
-        </div>
-        
         <div class="workflow-step">
             <div class="step-number">C</div>
             <div>
-                <strong>Context:</strong> Reviewed meeting transcripts, proposals, and existing materials to understand Pledge 1% audience needs
+                <strong>Context:</strong> Reviewed transcripts, proposals, and materials
             </div>
         </div>
         <div class="workflow-step">
             <div class="step-number">O</div>
             <div>
-                <strong>Objective:</strong> Create engaging, practical training that addresses real pain points of social impact leaders
+                <strong>Objective:</strong> Create engaging, practical training
             </div>
         </div>
         <div class="workflow-step">
             <div class="step-number">M</div>
             <div>
-                <strong>Method:</strong> Combined COMPAS framework with hands-on exercises and real-world examples
+                <strong>Method:</strong> COMPAS framework + hands-on exercises
             </div>
         </div>
+    </div>
+
+    <!-- Slide 21: How We Made This Part 2 -->
+    <div class="slide" id="slide-21">
+        <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
+        <h1>COMPAS in Action (cont'd)</h1>
         <div class="workflow-step">
             <div class="step-number">P</div>
             <div>
-                <strong>Performance:</strong> Built interactive HTML deck using Claude Code, incorporating MTM branding
+                <strong>Performance:</strong> Built with Claude Code + HTML/CSS/JS
             </div>
         </div>
         <div class="workflow-step">
             <div class="step-number">A</div>
             <div>
-                <strong>Assessment:</strong> Reviewed for clarity, flow, and practical value
+                <strong>Assessment:</strong> Reviewed for clarity and value
             </div>
         </div>
-        
         <div class="demo-box">
-            <div class="demo-title">The Tools</div>
-            <p>• <strong>Claude Code:</strong> AI pair programming for deck creation<br>
-            • <strong>HTML/CSS/JavaScript:</strong> Interactive, responsive design<br>
-            • <strong>Time to create:</strong> 45 minutes with AI assistance<br>
-            • <strong>Traditional time:</strong> 4-6 hours without AI</p>
+            <div class="demo-title">Results</div>
+            <p>• <strong>Time with AI:</strong> 45 minutes<br>
+            • <strong>Traditional time:</strong> 4-6 hours<br>
+            • <strong>Efficiency gain:</strong> 10x productivity<br>
+            • <strong>Deployed:</strong> GitHub + Netlify</p>
         </div>
     </div>
 
-    <!-- Slide 18: Q&A -->
+    <!-- Slide 22: Q&A -->
     <div class="slide" id="slide-18">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Questions & Discussion</h1>
@@ -863,7 +908,7 @@
         </p>
     </div>
 
-    <!-- Slide 19: Thank You -->
+    <!-- Slide 23: Thank You -->
     <div class="slide" id="slide-19">
         <div class="logo">MEET the M<span class="moment">O</span>MENT</div>
         <h1>Thank You!</h1>
@@ -901,7 +946,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 19;
+        const totalSlides = 23;
 
         function showSlide(n) {
             const slides = document.getElementsByClassName('slide');
