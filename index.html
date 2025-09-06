@@ -156,23 +156,62 @@
             left: 20px;
             display: flex;
             align-items: center;
-            font-weight: 800;
-            color: var(--dark-gray);
-            font-size: 1em;
+            font-weight: 700;
+            color: #000;
+            font-size: 1.1em;
             z-index: 10;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
         }
 
         .pledge-icon {
-            width: 32px;
-            height: 32px;
-            border: 3px solid var(--dark-gray);
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 8px;
-            font-size: 0.6em;
-            font-weight: 800;
+            position: relative;
+            width: 30px;
+            height: 38px;
+            margin-right: 10px;
+        }
+
+        .pledge-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 22px;
+            height: 38px;
+            border: 3px solid #000;
+            border-right: none;
+            background: white;
+        }
+
+        .pledge-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            border: 3px solid #000;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .pledge-icon-inner {
+            position: absolute;
+            top: 18px;
+            left: 6px;
+            width: 10px;
+            height: 14px;
+            border: 2px solid #000;
+            background: white;
+        }
+
+        .pledge-icon-text {
+            position: absolute;
+            top: 19px;
+            left: 5px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #000;
+            z-index: 2;
         }
 
         .navigation {
@@ -449,8 +488,11 @@
     <!-- Slide 1: Title -->
     <div class="slide active" id="slide-1">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -466,8 +508,11 @@
     <!-- Slide 2: Welcome & Objectives -->
     <div class="slide" id="slide-2">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -495,8 +540,11 @@
     <!-- Slide 3: The Moth Story Part 1 -->
     <div class="slide" id="slide-3">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -514,8 +562,11 @@
     <!-- Slide 4: The Moth Story Part 2 -->
     <div class="slide" id="slide-4">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -534,8 +585,11 @@
     <!-- Slide 5: Introducing COMPAS -->
     <div class="slide framework" id="slide-5">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -606,8 +660,11 @@
             </div>
         </div>
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -631,8 +688,11 @@
     <!-- Slide 7: Context Part 2 -->
     <div class="slide" id="slide-7">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -655,8 +715,11 @@
     <!-- Slide 8: Know Your Builders -->
     <div class="slide case-study" id="slide-8">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -684,8 +747,11 @@
     <!-- Slide 9: Objective -->
     <div class="slide" id="slide-9">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -705,8 +771,11 @@
     <!-- Slide 10: Common Objectives -->
     <div class="slide framework" id="slide-10">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -752,8 +821,11 @@
             </div>
         </div>
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -782,8 +854,11 @@
     <!-- Slide 12: Method Example -->
     <div class="slide framework" id="slide-11">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -804,8 +879,11 @@
     <!-- Slide 12: Context: Sample Discovery Prompt -->
     <div class="slide" id="slide-12">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -830,8 +908,11 @@
     <!-- Slide 13: CRAFT Framework Part 1 -->
     <div class="slide framework" id="slide-13">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -871,8 +952,11 @@
     <!-- Slide 14: Objective: Sample Problem Definition Prompt -->
     <div class="slide case-study" id="slide-14">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -902,8 +986,11 @@
     <!-- Slide 15: CRAFT Framework Part 2 -->
     <div class="slide case-study" id="slide-15">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -925,8 +1012,11 @@
     <!-- Slide 16: Impact Reporting Assistant -->
     <div class="slide case-study" id="slide-16">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -954,8 +1044,11 @@
     <!-- Slide 17: Building Packages -->
     <div class="slide" id="slide-17">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -988,8 +1081,11 @@
     <!-- Slide 18: Use Case - Impact Data Analysis -->
     <div class="slide case-study" id="slide-18">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1018,8 +1114,11 @@
     <!-- Slide 19: Data Analysis CRAFT Example -->
     <div class="slide case-study" id="slide-19">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1044,8 +1143,11 @@
     <!-- Slide 20: Vibe Coding -->
     <div class="slide" id="slide-20">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1075,8 +1177,11 @@
     <!-- Slide 21: Guardrails -->
     <div class="slide" id="slide-21">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1109,8 +1214,11 @@
     <!-- Slide 22: Hands-On Exercise Part 1 -->
     <div class="slide exercise" id="slide-22">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1137,8 +1245,11 @@
     <!-- Slide 23: Hands-On Exercise Part 2 -->
     <div class="slide exercise" id="slide-23">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1168,8 +1279,11 @@
     <!-- Slide 24: Performance & Assessment -->
     <div class="slide" id="slide-24">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1195,8 +1309,11 @@
     <!-- Slide 25: Community Learning -->
     <div class="slide" id="slide-25">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1249,8 +1366,11 @@
             </div>
         </div>
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1301,8 +1421,11 @@
             </div>
         </div>
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1327,8 +1450,11 @@
     <!-- Slide 28: Resources & Next Steps -->
     <div class="slide" id="slide-28">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1353,8 +1479,11 @@
     <!-- Slide 29: How We Made This Part 1 -->
     <div class="slide" id="slide-29">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1379,8 +1508,11 @@
     <!-- Slide 30: How We Made This Part 2 -->
     <div class="slide" id="slide-30">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1407,8 +1539,11 @@
     <!-- Slide 31: Q&A -->
     <div class="slide" id="slide-31">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
@@ -1432,8 +1567,11 @@
     <!-- Slide 32: Thank You -->
     <div class="slide" id="slide-32">
         <div class="logo-pledge">
-            <div class="pledge-icon">1%</div>
-            <span>Pledge 1%</span>
+            <div class="pledge-icon">
+                <div class="pledge-icon-inner"></div>
+                <span class="pledge-icon-text">1%</span>
+            </div>
+            <span style="font-weight: 700; color: #000;">Pledge 1%</span>
         </div>
         <div class="logo-mtm">
             MEET the M<span class="moment">O</span>MENT
