@@ -431,8 +431,16 @@
         }
 
         .slide.framework {
-            border-top: 5px solid var(--turquoise);
-            background: linear-gradient(to bottom, #f8fdfe 0%, white 5%);
+            border-top: 8px solid var(--turquoise);
+            background: linear-gradient(to bottom, #e8f9fc 0%, white 8%);
+            box-shadow: 0 20px 60px rgba(74, 181, 196, 0.2);
+        }
+        
+        .slide.framework h1 {
+            color: var(--navy);
+            border-bottom: 2px solid var(--turquoise);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
 
         .slide.exercise {
@@ -670,23 +678,59 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>C - Context: Understanding Your Landscape</h1>
+        <h1>C - Context: Comprehensive Information Gathering</h1>
+        <h2 style="color: var(--turquoise); font-size: 1.3em;">Providing AI with the Full Picture</h2>
+        
         <div class="demo-box">
-            <div class="demo-title">Social Impact Leader's Morning</div>
-            <p>"Reviewing draft reports while fielding CEO cost-cut requests and employee crisis expectations"</p>
-            <p><strong>The reality:</strong> Facing quarterly reporting deadlines with reduced staff, navigating between compliance requirements and strategic initiatives while demonstrating ROI</p>
+            <div class="demo-title">What is Context?</div>
+            <p><strong>Context is ALL relevant information about your situation:</strong></p>
+            <ul style="margin: 10px 0;">
+                <li>Who you are and your role</li>
+                <li>Your organization's mission and structure</li>
+                <li>The current situation and challenges</li>
+                <li>Available resources and constraints</li>
+            </ul>
         </div>
-        <h3>Key Questions for Context Gathering</h3>
+        
+        <h3>How to Provide Context to AI</h3>
         <ul>
-            <li>What AI tools is your team already using (officially and unofficially)?</li>
-            <li>What problems are they trying to solve?</li>
-            <li>What are your compliance and security requirements?</li>
-            <li>What's your team's technical comfort level?</li>
+            <li><strong>Documents:</strong> Strategic plans, reports, templates</li>
+            <li><strong>Transcripts:</strong> Meeting notes, interviews, recordings</li>
+            <li><strong>Data:</strong> Metrics, survey results, analytics</li>
+            <li><strong>Background:</strong> Industry trends, stakeholder expectations</li>
         </ul>
+        
+        <p style="font-weight: 600; margin-top: 20px;">🎯 <strong>Remember:</strong> The more comprehensive context you provide, the more accurate and relevant the AI's response will be.</p>
     </div>
 
-    <!-- Slide 7: Context Part 2 -->
-    <div class="slide" id="slide-7">
+    <!-- Slide 7: Context Example - Pledge 1% -->
+    <div class="slide framework" id="slide-7">
+        <div class="nav-bar">
+            <div class="nav-step active">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">
                 <div class="pledge-icon-inner"></div>
@@ -698,18 +742,29 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Meta-Prompting: Your Secret Weapon</h1>
-        <div class="prompt-example">
-            <p><strong>The Meta-Prompt that writes all your other prompts:</strong></p>
-            <p style="font-style: italic; margin-top: 10px;">"I'm a [Social Impact/Program/Workstream] Leader at [company type]. Create an expert prompt for [specific task]. Include: detailed persona with 10+ years experience, comprehensive context about [stakeholder/compliance] requirements, clear success metrics, and output format for [C-suite/board/employee] audience. Make it 2 pages long with validation checks."</p>
+        <h1>Context in Action: Pledge 1% Example</h1>
+        
+        <div class="demo-box">
+            <div class="demo-title">Real Pledge 1% Builder Scenario</div>
+            <p><strong>Situation:</strong> A Social Impact Leader needs to create quarterly impact reports</p>
         </div>
-        <h3>What You'll Discover</h3>
-        <ul>
-            <li>Hidden AI usage across departments</li>
-            <li>Common pain points and opportunities</li>
-            <li>Security and compliance gaps</li>
-            <li>Training needs and skill levels</li>
-        </ul>
+        
+        <div class="prompt-example">
+            <p><strong>Example Context Prompt:</strong></p>
+            <p style="font-style: italic; margin-top: 10px; font-size: 0.95em;">
+            "I'm the Social Impact Leader at a 500-person tech company. We're a Pledge 1% member committed to 1% of equity, product, and employee time. I have:
+            • Q3 volunteer data (Excel spreadsheet)
+            • Grant recipient reports (10 PDFs)
+            • Employee survey results (CSV file)
+            • Board presentation template from last quarter
+            • Tight deadline: Report due in 3 days
+            • Audience: C-suite and board members who want ROI metrics
+            
+            Help me synthesize this into a compelling impact narrative."
+            </p>
+        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">💡 <strong>Key Insight:</strong> Providing all this context upfront enables AI to deliver exactly what you need, formatted correctly for your audience.</p>
     </div>
 
     <!-- Slide 8: Know Your Builders -->
@@ -745,7 +800,33 @@
     </div>
 
     <!-- Slide 9: Objective -->
-    <div class="slide" id="slide-9">
+    <div class="slide framework" id="slide-9">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">
                 <div class="pledge-icon-inner"></div>
@@ -770,6 +851,32 @@
 
     <!-- Slide 10: Common Objectives -->
     <div class="slide framework" id="slide-10">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">
                 <div class="pledge-icon-inner"></div>
@@ -781,19 +888,36 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Your Real Objectives (We Heard You!)</h1>
-        <ul style="font-size: 1.05em; line-height: 1.8;">
-            <li><span class="highlight">Business Case Building:</span> Protect programs in budget cuts</li>
-            <li><span class="highlight">Impact Reporting:</span> Automate reporting without drowning</li>
-            <li><span class="highlight">Stakeholder Management:</span> C-suite ready insights in minutes</li>
-            <li><span class="highlight">Impact Analysis:</span> Turn data chaos into compelling stories</li>
-            <li><span class="highlight">Crisis Response:</span> Navigate social/political events gracefully</li>
-            <li><span class="highlight">Employee Engagement:</span> Scale volunteering & giving programs</li>
-        </ul>
+        <h1>Objective in Action: Pledge 1% Example</h1>
+        
+        <div class="demo-box">
+            <div class="demo-title">Real Pledge 1% Builder Challenge</div>
+            <p><strong>Situation:</strong> Social Impact Leader facing budget pressure while managing increased reporting demands</p>
+        </div>
+        
+        <h3>Breaking Down the Objective</h3>
+        
+        <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div>
+                <strong>Identify the Problem:</strong><br>
+                "Quarterly impact reports take 40 hours of manual work, pulling me away from strategic initiatives"
+            </div>
+        </div>
+        
+        <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div>
+                <strong>Define Desired Outcome:</strong><br>
+                "Create a system for monthly reports in under 4 hours with automated data visualization"
+            </div>
+        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">🎯 <strong>Clear Objective:</strong> Transform 40-hour quarterly process into 4-hour monthly process</p>
     </div>
 
     <!-- Slide 11: Method -->
-    <div class="slide framework" id="slide-10">
+    <div class="slide framework" id="slide-11">
         <div class="nav-bar">
             <div class="nav-step completed">
                 <div class="nav-letter">C</div>
@@ -831,28 +955,64 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>M - Method: Your Implementation Plan</h1>
-        <h3>The Four Levels of AI Implementation</h3>
+        <h1>M - Method: How to Achieve Your Objective</h1>
+        <h2 style="color: var(--turquoise); font-size: 1.3em;">Choosing the Right Approach</h2>
+        
+        <div class="demo-box">
+            <div class="demo-title">What is Method?</div>
+            <p><strong>Method is HOW you'll achieve your objective. Consider:</strong></p>
+            <ul style="margin: 10px 0;">
+                <li>🤖 <strong>AI Tools:</strong> Which AI capabilities best fit?</li>
+                <li>⚙️ <strong>Traditional Automation:</strong> Could simple automation work?</li>
+                <li>📋 <strong>Process Improvement:</strong> Maybe just better workflows?</li>
+            </ul>
+        </div>
+        
+        <h3>AI Implementation Levels</h3>
         <div class="workflow-step">
             <div class="step-number">1</div>
-            <div><strong>Prompts:</strong> Basic queries ("Summarize this document")</div>
+            <div><strong>Prompts:</strong> One-time queries and tasks</div>
         </div>
         <div class="workflow-step">
             <div class="step-number">2</div>
-            <div><strong>Packages:</strong> Reusable tools (GPTs, Claude Projects, Gemini Gems)</div>
+            <div><strong>Packages:</strong> Reusable AI configurations (GPTs, Projects)</div>
         </div>
         <div class="workflow-step">
             <div class="step-number">3</div>
-            <div><strong>Automations:</strong> Connected workflows (Zapier, Make, n8n)</div>
+            <div><strong>Automations:</strong> Connected AI workflows</div>
         </div>
-        <div class="workflow-step">
-            <div class="step-number">4</div>
-            <div><strong>Agents:</strong> Autonomous systems (Advanced - not today's focus)</div>
-        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">⚠️ <strong>Remember:</strong> Don't start with the method! Context → Objective → THEN Method</p>
     </div>
 
     <!-- Slide 12: Method Example -->
-    <div class="slide framework" id="slide-11">
+    <div class="slide framework" id="slide-12">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">
                 <div class="pledge-icon-inner"></div>
@@ -864,20 +1024,41 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Method in Action</h1>
+        <h1>Method in Action: Pledge 1% Example</h1>
+        
         <div class="demo-box">
-            <div class="demo-title">Social Impact Leader's Reporting Challenge</div>
-            <p style="font-style: italic; margin-bottom: 10px;">"My calendar is blocked by reporting deadlines, I'm drowning in multiple impact frameworks and stakeholder requests"</p>
-            <div class="demo-title" style="margin-top: 15px;">The Solution Method</div>
-            <p>• AI-powered framework mapping for automatic compliance checks</p>
-            <p>• Automated data collection from multiple departments</p>
-            <p>• Generate investor-ready disclosures in hours, not weeks</p>
-            <p style="margin-top: 10px;"><strong>Result:</strong> 40 hours → 4 hours quarterly, appearing innovative not just compliant</p>
+            <div class="demo-title">Continuing Our Reporting Example</div>
+            <p><strong>Context:</strong> Social Impact Leader with quarterly reports, multiple data sources</p>
+            <p><strong>Objective:</strong> Reduce 40-hour process to 4 hours monthly</p>
         </div>
+        
+        <h3>Choosing the Method</h3>
+        
+        <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div>
+                <strong>Create a Package (Claude Project):</strong><br>
+                • Upload report templates and past examples<br>
+                • Add data formatting guidelines<br>
+                • Include compliance requirements
+            </div>
+        </div>
+        
+        <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div>
+                <strong>Semi-Automate with Zapier:</strong><br>
+                • Auto-collect data from various platforms<br>
+                • Feed into AI for analysis<br>
+                • Generate draft reports automatically
+            </div>
+        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">💡 <strong>Result:</strong> A reusable system that saves 36 hours per quarter!</p>
     </div>
 
-    <!-- Slide 12: Context: Sample Discovery Prompt -->
-    <div class="slide" id="slide-12">
+    <!-- Slide 13: Context Discovery Prompt (Non-COMPAS) -->
+    <div class="slide" id="slide-13">
         <div class="logo-pledge">
             <div class="pledge-icon">
                 <div class="pledge-icon-inner"></div>
@@ -1290,24 +1471,59 @@
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
         <h1>P & A: Performance and Assessment</h1>
-        <h3>Performance: Making it Real</h3>
-        <ul>
-            <li>Begin with <span class="highlight">one workflow</span> this week</li>
-            <li>Track time saved and quality improvements</li>
-            <li>Share wins with your team</li>
-            <li>Remember: Sometimes the best solution isn't AI!</li>
-        </ul>
-        <h3>Assessment: Success Metrics</h3>
-        <ul>
-            <li><span class="accent">Efficiency:</span> Hours saved per week</li>
-            <li><span class="accent">Quality:</span> Error reduction, consistency</li>
-            <li><span class="accent">Innovation:</span> New capabilities enabled</li>
-            <li><span class="accent">Satisfaction:</span> Team morale and reduced burnout</li>
-        </ul>
+        <h2 style="color: var(--turquoise); font-size: 1.3em;">Execute, Measure, and Iterate</h2>
+        
+        <div class="demo-box">
+            <div class="demo-title">Performance: Implementation</div>
+            <p><strong>Executing your chosen method:</strong></p>
+            <ul style="margin: 10px 0;">
+                <li>🚀 Deploy your AI solution or process</li>
+                <li>👥 Train team members on new workflow</li>
+                <li>📄 Document for consistency and scale</li>
+            </ul>
+        </div>
+        
+        <div class="demo-box">
+            <div class="demo-title">Assessment: Continuous Improvement</div>
+            <p><strong>Evaluating against your objective:</strong></p>
+            <ul style="margin: 10px 0;">
+                <li>📏 Did we achieve our desired outcome?</li>
+                <li>🔄 What needs adjustment?</li>
+                <li>🎯 How can we iterate to improve?</li>
+            </ul>
+        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">🔁 <strong>The COMPAS Cycle:</strong> Assessment leads back to refining Context, Objective, or Method</p>
     </div>
 
-    <!-- Slide 25: Community Learning -->
-    <div class="slide" id="slide-25">
+    <!-- Slide 25: Share Example - Pledge 1% -->
+    <div class="slide framework" id="slide-25">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">
                 <div class="pledge-icon-inner"></div>
@@ -1319,22 +1535,42 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Community Learning: You're Not Alone!</h1>
-        <h3>The Power of the Pledge 1% Builders AI Channel</h3>
-        <ul>
-            <li>Share your wins and challenges with peers</li>
-            <li>Get feedback on prompts and packages</li>
-            <li>Learn from other Builders' use cases</li>
-            <li>Stay updated on new tools and techniques</li>
-        </ul>
+        <h1>Share in Action: Pledge 1% Example</h1>
+        
         <div class="demo-box">
-            <div class="demo-title">Weekly Community Challenges</div>
-            <p><strong>Week 1:</strong> Share your first Package in Pledge 1% Builders AI channel</p>
-            <p><strong>Week 2:</strong> Test someone else's prompt and give feedback</p>
-            <p><strong>Week 3:</strong> Post a "before/after" time savings win</p>
-            <p><strong>Week 4:</strong> Collaborate on a shared challenge</p>
+            <div class="demo-title">Our Reporting Automation Success Story</div>
+            <p><strong>What we're sharing with the community:</strong></p>
         </div>
-        <p style="margin-top: 20px; font-weight: 600;">Remember: Your colleagues are facing the same challenges. Share your experiments - even the failures teach us!</p>
+        
+        <div class="workflow-step">
+            <div class="step-number">📢</div>
+            <div>
+                <strong>In Pledge 1% Builders AI Channel:</strong><br>
+                "We reduced reporting from 40 to 6 hours! Here's our Claude Project template - feel free to adapt it!"
+            </div>
+        </div>
+        
+        <div class="workflow-step">
+            <div class="step-number">🎁</div>
+            <div>
+                <strong>What We're Sharing:</strong><br>
+                • Our prompts and templates<br>
+                • Lessons learned (what didn't work)<br>
+                • Next iteration plans
+            </div>
+        </div>
+        
+        <div class="workflow-step">
+            <div class="step-number">💡</div>
+            <div>
+                <strong>What We're Getting Back:</strong><br>
+                "Try adding this to your prompt..." <br>
+                "We solved that with Zapier integration..."<br>
+                "Here's how we handle compliance..."
+            </div>
+        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">🌱 <strong>Result:</strong> Everyone improves faster through shared learning!</p>
     </div>
 
     <!-- Slide 26: Performance & Assessment: Sample Tracking Prompts -->
@@ -1376,20 +1612,36 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Performance & Assessment: Sample Tracking Prompts</h1>
-
-        <div class="prompt-example">
-            <p><strong>Use this prompt to track and optimize performance:</strong></p>
-            <p style="font-style: italic; margin-top: 10px; font-size: 0.85em;">
-            "I've implemented [AI tool/workflow] for [specific task] over the past [timeframe]. Initial metrics show [current results]. Help me create a performance dashboard that tracks: 1) Time saved (hours/week), 2) Quality metrics (error rates, satisfaction scores), 3) Adoption rate (% of team using it), 4) ROI (cost savings vs. tool cost). Then analyze my data to identify: What's working well? What needs adjustment? What unexpected benefits or challenges emerged? Provide specific recommendations to improve performance by 25% next month."
-            </p>
-        </div>
+        <h1>P & A in Action: Pledge 1% Example</h1>
+        
         <div class="demo-box">
-            <div class="demo-title">Why This Works</div>
-            <p>• Focuses on measurable outcomes</p>
-            <p>• Requests both analysis and action items</p>
-            <p>• Sets specific improvement target</p>
+            <div class="demo-title">Continuing Our Reporting Automation</div>
+            <p><strong>After 1 Month of Implementation:</strong></p>
         </div>
+        
+        <h3>Performance Results</h3>
+        <div class="workflow-step">
+            <div class="step-number">✅</div>
+            <div>
+                <strong>What Worked:</strong><br>
+                • Report time: 40 hours → 6 hours (85% reduction!)<br>
+                • Monthly reports now possible (was quarterly)<br>
+                • Team adopted quickly with training
+            </div>
+        </div>
+        
+        <h3>Assessment & Iteration</h3>
+        <div class="workflow-step">
+            <div class="step-number">🔄</div>
+            <div>
+                <strong>Adjustments Needed:</strong><br>
+                • <strong>Context:</strong> Add more historical data for better trends<br>
+                • <strong>Method:</strong> Automate data collection further<br>
+                • <strong>Objective:</strong> New goal - reduce to 3 hours
+            </div>
+        </div>
+        
+        <p style="font-weight: 600; margin-top: 20px;">🎆 <strong>Key Learning:</strong> Start small, measure results, iterate based on real data!</p>
     </div>
 
     <!-- Slide 27: Share: Sample Collaboration Prompt -->
@@ -1431,14 +1683,28 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Share: Sample Collaboration Prompt</h1>
-
-        <div class="prompt-example">
-            <p><strong>Use this prompt to envision your transformed organization:</strong></p>
-            <p style="font-style: italic; margin-top: 10px; font-size: 0.85em;">
-            "Our organization has successfully implemented AI across [departments/workflows]. We've freed up [hours] per week and improved [key metrics]. Now help me envision 'Super Us': 1) What strategic initiatives can we tackle with our freed capacity? 2) How can we use AI to better serve [our beneficiaries]? 3) What new partnerships or funding opportunities does this unlock? 4) What's our story for funders about our AI transformation? 5) Create a one-page 'AI Success Story' template highlighting our journey, impact metrics, and vision for scaling. Make it compelling for grant applications."
-            </p>
+        <h1>S - Share: Foster Learning Culture</h1>
+        <h2 style="color: var(--turquoise); font-size: 1.3em;">Multiply Impact Through Collaboration</h2>
+        
+        <div class="demo-box">
+            <div class="demo-title">What is Share?</div>
+            <p><strong>Sharing accelerates everyone's learning:</strong></p>
+            <ul style="margin: 10px 0;">
+                <li>🤝 <strong>Get Feedback:</strong> Learn from others' experiences</li>
+                <li>💡 <strong>Give Insights:</strong> Help colleagues avoid pitfalls</li>
+                <li>🌱 <strong>Build Culture:</strong> Create organizational learning</li>
+            </ul>
         </div>
+        
+        <h3>When and How to Share</h3>
+        <ul>
+            <li><strong>During Context:</strong> "Who else has faced this challenge?"</li>
+            <li><strong>During Assessment:</strong> "Here's what worked/didn't work"</li>
+            <li><strong>After Success:</strong> "Here's a template you can use"</li>
+            <li><strong>When Stuck:</strong> "Has anyone solved this before?"</li>
+        </ul>
+        
+        <p style="font-weight: 600; margin-top: 20px;">🌐 <strong>Pledge 1% Builders AI Channel:</strong> Your community for sharing and learning!</p>
         <div class="demo-box">
             <div class="demo-title">Why This Works</div>
             <p>• Shifts focus from efficiency to impact</p>
