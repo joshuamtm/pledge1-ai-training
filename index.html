@@ -331,6 +331,73 @@
             font-size: 0.9em;
         }
 
+        /* Navigation Bar */
+        .nav-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(90deg, var(--beige) 0%, var(--white) 100%);
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: var(--dark-gray);
+            padding: 0 20px;
+            z-index: 100;
+        }
+
+        .nav-step {
+            display: flex;
+            align-items: center;
+            margin: 0 8px;
+            opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+
+        .nav-step.active {
+            opacity: 1;
+            color: var(--navy);
+        }
+
+        .nav-step.completed {
+            opacity: 0.7;
+            color: var(--turquoise);
+        }
+
+        .nav-letter {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--turquoise);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            font-weight: 700;
+        }
+
+        .nav-step.active .nav-letter {
+            background: var(--navy);
+        }
+
+        /* Slide Type Color Coding */
+        .slide.case-study {
+            border-top: 4px solid var(--warm-yellow);
+        }
+
+        .slide.framework {
+            border-top: 4px solid var(--turquoise);
+        }
+
+        .slide.exercise {
+            border-top: 4px solid var(--navy);
+        }
+
         .ai-badge {
             display: inline-block;
             background: linear-gradient(135deg, var(--turquoise), var(--navy));
@@ -410,7 +477,7 @@
             <li>Learn <span class="accent">meta-prompting</span> to generate expert prompts</li>
             <li>Build AI workflows for impact reporting & business cases</li>
             <li>Create reusable Packages (GPTs/Projects/Gems)</li>
-            <li>Leverage community learning through Pledge 1% AI Slack</li>
+            <li>Leverage community learning through Pledge 1% Builders AI channel in Slack</li>
         </ul>
         <h3>What You'll Walk Away With</h3>
         <ul>
@@ -501,14 +568,40 @@
             </div>
             <div class="compas-item">
                 <div class="compas-letter">S</div>
-                <div class="compas-word">Super You</div>
-                <p>Continuous improvement</p>
+                <div class="compas-word">Share</div>
+                <p>Foster learning culture</p>
             </div>
         </div>
     </div>
 
     <!-- Slide 6: Context Part 1 -->
-    <div class="slide" id="slide-6">
+    <div class="slide framework" id="slide-6">
+        <div class="nav-bar">
+            <div class="nav-step active">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -521,7 +614,7 @@
         <div class="demo-box">
             <div class="demo-title">Social Impact Leader's Morning</div>
             <p>"Reviewing draft reports while fielding CEO cost-cut requests and employee crisis expectations"</p>
-            <p><strong>The real context:</strong> Stretched thin after resource cuts, constantly justifying budgets while managing crisis responses</p>
+            <p><strong>The reality:</strong> Facing quarterly reporting deadlines with reduced staff, navigating between compliance requirements and strategic initiatives while demonstrating ROI</p>
         </div>
         <h3>Key Questions for Context Gathering</h3>
         <ul>
@@ -545,7 +638,7 @@
         <h1>Meta-Prompting: Your Secret Weapon</h1>
         <div class="prompt-example">
             <p><strong>The Meta-Prompt that writes all your other prompts:</strong></p>
-            <p style="font-style: italic; margin-top: 10px;">"I'm a [Social Impact/ESG/Workstream] Leader at [company type]. Create an expert prompt for [specific task]. Include: detailed persona with 10+ years experience, comprehensive context about [stakeholder/compliance] requirements, clear success metrics, and output format for [C-suite/board/employee] audience. Make it 2 pages long with validation checks."</p>
+            <p style="font-style: italic; margin-top: 10px;">"I'm a [Social Impact/Program/Workstream] Leader at [company type]. Create an expert prompt for [specific task]. Include: detailed persona with 10+ years experience, comprehensive context about [stakeholder/compliance] requirements, clear success metrics, and output format for [C-suite/board/employee] audience. Make it 2 pages long with validation checks."</p>
         </div>
         <h3>What You'll Discover</h3>
         <ul>
@@ -581,7 +674,7 @@
         </div>
         <div class="workflow-step">
             <div class="step-number">📊</div>
-            <div><strong>ESG/Sustainability Leaders:</strong> Compliance warriors seeking innovation</div>
+            <div><strong>Program/Operations Leaders:</strong> Efficiency seekers managing multiple initiatives</div>
         </div>
     </div>
 
@@ -628,7 +721,33 @@
     </div>
 
     <!-- Slide 11: Method -->
-    <div class="slide" id="slide-10">
+    <div class="slide framework" id="slide-10">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -720,7 +839,7 @@
         <div class="compas-visual">
             <div class="compas-item">
                 <div class="compas-letter">C</div>
-                <div class="compas-word">Context</div>
+                <div class="compas-word">Background</div>
                 <p>Purpose & goals</p>
             </div>
             <div class="compas-item">
@@ -747,7 +866,7 @@
     </div>
 
     <!-- Slide 15: Objective: Sample Problem Definition Prompt -->
-    <div class="slide" id="slide-14">
+    <div class="slide case-study" id="slide-14">
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -758,8 +877,9 @@
         </div>
         <h1>Business Case Builder for Social Impact</h1>
         <div class="demo-box">
-            <div class="demo-title">Alia's Challenge at Peloton</div>
+            <div class="demo-title">A Social Impact Leader's Challenge</div>
             <p>"How do I protect my programs when budgets are being cut?"</p>
+            <p style="font-size: 0.8em; color: var(--light-gray); margin-top: 5px;">*Note: "Builder" here refers to Pledge 1% program participants</p>
         </div>
 
         <div class="prompt-example">
@@ -777,7 +897,7 @@
     </div>
 
     <!-- Slide 15: CRAFT Framework Part 2 -->
-    <div class="slide" id="slide-15">
+    <div class="slide case-study" id="slide-15">
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -800,7 +920,7 @@
     </div>
 
     <!-- Slide 16: ESG Reporting Assistant -->
-    <div class="slide" id="slide-16">
+    <div class="slide case-study" id="slide-16">
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -913,7 +1033,7 @@
             <div class="demo-title">Deploy to Your Team</div>
             <p>• Save as GPT/Project/Gem based on your platform</p>
             <p>• Upload sample data for testing</p>
-            <p>• Share in Pledge 1% AI Slack for feedback</p>
+            <p>• Share in Pledge 1% Builders AI channel for feedback</p>
             <p>• Iterate based on team input</p>
         </div>
     </div>
@@ -967,7 +1087,7 @@
         </div>
         <div class="workflow-step">
             <div class="step-number">✓</div>
-            <div><strong>Data Privacy:</strong> Never upload PII or sensitive donor info</div>
+            <div><strong>Data Privacy:</strong> Never upload PII or sensitive information</div>
         </div>
         <div class="workflow-step">
             <div class="step-number">✓</div>
@@ -1080,7 +1200,7 @@
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
         <h1>Community Learning: You're Not Alone!</h1>
-        <h3>The Power of the Pledge 1% AI Slack Channel</h3>
+        <h3>The Power of the Pledge 1% Builders AI Channel</h3>
         <ul>
             <li>Share your wins and challenges with peers</li>
             <li>Get feedback on prompts and packages</li>
@@ -1089,7 +1209,7 @@
         </ul>
         <div class="demo-box">
             <div class="demo-title">Weekly Community Challenges</div>
-            <p><strong>Week 1:</strong> Share your first Package in Slack</p>
+            <p><strong>Week 1:</strong> Share your first Package in Pledge 1% Builders AI channel</p>
             <p><strong>Week 2:</strong> Test someone else's prompt and give feedback</p>
             <p><strong>Week 3:</strong> Post a "before/after" time savings win</p>
             <p><strong>Week 4:</strong> Collaborate on a shared challenge</p>
@@ -1098,7 +1218,33 @@
     </div>
 
     <!-- Slide 26: Performance & Assessment: Sample Tracking Prompts -->
-    <div class="slide" id="slide-26">
+    <div class="slide framework" id="slide-26">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -1123,8 +1269,34 @@
         </div>
     </div>
 
-    <!-- Slide 27: Super You: Sample Transformation Prompt -->
-    <div class="slide" id="slide-27">
+    <!-- Slide 27: Share: Sample Collaboration Prompt -->
+    <div class="slide framework" id="slide-27">
+        <div class="nav-bar">
+            <div class="nav-step completed">
+                <div class="nav-letter">C</div>
+                <span>Context</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">O</div>
+                <span>Objective</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">M</div>
+                <span>Method</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">P</div>
+                <span>Performance</span>
+            </div>
+            <div class="nav-step completed">
+                <div class="nav-letter">A</div>
+                <span>Assessment</span>
+            </div>
+            <div class="nav-step active">
+                <div class="nav-letter">S</div>
+                <span>Share</span>
+            </div>
+        </div>
         <div class="logo-pledge">
             <div class="pledge-icon">1%</div>
             <span>Pledge 1%</span>
@@ -1133,7 +1305,7 @@
             MEET the M<span class="moment">O</span>MENT
             <div class="tagline">RESILIENCE FOR NONPROFITS</div>
         </div>
-        <h1>Super You: Sample Transformation Prompt</h1>
+        <h1>Share: Sample Collaboration Prompt</h1>
 
         <div class="prompt-example">
             <p><strong>Use this prompt to envision your transformed organization:</strong></p>
