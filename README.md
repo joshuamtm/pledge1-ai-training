@@ -12,7 +12,7 @@ This interactive slide deck teaches practical AI implementation through the COMP
 - **M**ethod - Creating implementation plans
 - **P**erformance - Executing solutions
 - **A**ssessment - Measuring and iterating
-- **S**uper You - Continuous improvement
+- **S**hare - Foster learning culture
 
 ### 💡 Key Features
 
