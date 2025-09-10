@@ -309,67 +309,65 @@
             font-size: 0.9em;
         }
 
-        /* Navigation Bar */
-        .nav-bar {
-            position: absolute;
-            top: 60px;
-            left: 20px;
-            right: 20px;
-            height: 35px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+        /* COMPAS Navigation Bar - Similar to slide 15's method-nav */
+        .compass-nav {
+            background: linear-gradient(135deg, var(--beige) 0%, #fff 100%);
+            border: 2px solid var(--turquoise);
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.82em;
             font-weight: 600;
             color: var(--dark-gray);
-            padding: 0 15px;
-            z-index: 9;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            gap: 10px;
         }
 
-        .nav-step {
+        .compass-nav-item {
             display: flex;
             align-items: center;
-            margin: 0 6px;
-            opacity: 0.4;
-            transition: opacity 0.3s;
-            font-size: 0.8em;
+            padding: 3px 8px;
+            margin: 0 2px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            gap: 4px;
+            opacity: 0.6;
         }
 
-        .nav-step.active {
+        .compass-nav-item:hover {
+            background: var(--beige);
             opacity: 1;
-            color: var(--navy);
         }
 
-        .nav-step.completed {
-            opacity: 0.7;
-            color: var(--turquoise);
+        .compass-nav-item.active {
+            background: var(--turquoise);
+            color: white;
+            opacity: 1;
         }
 
-        .nav-letter {
+        .compass-nav-letter {
             width: 22px;
             height: 22px;
             border-radius: 50%;
-            background: #e0e0e0;
-            color: var(--dark-gray);
+            background: var(--navy);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 4px;
             font-weight: 700;
             font-size: 0.75em;
         }
 
-        .nav-step.active .nav-letter {
-            background: var(--navy);
-            color: white;
+        .compass-nav-item.active .compass-nav-letter {
+            background: white;
+            color: var(--navy);
         }
-        
-        .nav-step.completed .nav-letter {
-            background: var(--turquoise);
-            color: white;
+
+        .compass-nav-item span {
+            display: inline-block;
+            font-size: 0.85em;
         }
 
         /* Method navigation bar */
@@ -455,6 +453,37 @@
         .maria-intro h3 {
             color: var(--navy);
             margin-bottom: 15px;
+        }
+
+        /* Full-size image slide */
+        .full-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 10px;
+        }
+
+        .full-image-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .full-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .full-image:hover {
+            transform: scale(1.02);
         }
 
         @media (max-width: 768px) {
@@ -686,29 +715,29 @@
 
     <!-- Slide 9: Context Part 1 -->
     <div class="slide framework" id="slide-9">
-        <div class="nav-bar">
-            <div class="nav-step active">
-                <div class="nav-letter">C</div>
+        <div class="compass-nav">
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -745,29 +774,29 @@
 
     <!-- Slide 10: Context Example - Maria Scenario 1 -->
     <div class="slide framework" id="slide-10">
-        <div class="nav-bar">
-            <div class="nav-step active">
-                <div class="nav-letter">C</div>
+        <div class="compass-nav">
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -803,29 +832,29 @@
 
     <!-- Slide 11: Objective -->
     <div class="slide framework" id="slide-11">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -848,29 +877,29 @@
 
     <!-- Slide 12: Objective Example - Maria Scenario 2 -->
     <div class="slide framework" id="slide-12">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -917,29 +946,29 @@
 
     <!-- Slide 13: Method -->
     <div class="slide framework" id="slide-13">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -981,29 +1010,29 @@
 
     <!-- Slide 14: Method Example -->
     <div class="slide framework" id="slide-14">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1308,8 +1337,26 @@
         </ul>
     </div>
 
-    <!-- Slide 22: Guardrails -->
+    <!-- Slide 22: World of the Possible -->
     <div class="slide" id="slide-22">
+        <div class="method-nav">
+            <strong>Method Deep Dive:</strong> The World of the Possible
+        </div>
+        <div class="logo-pledge">
+            <img src="branding assets/Pledge 189px.png" alt="Pledge 1%">
+        </div>
+        <div class="logo-mtm">
+            <img src="branding assets/MTM-logo-180x49.png" alt="Meet the Moment">
+        </div>
+        <div class="full-image-container">
+            <a href="https://drive.google.com/file/d/1etXYwzz6rC_PhDyC6LzjYTrjqGRyh5je/view?usp=sharing" target="_blank" class="full-image-link">
+                <img src="World of the Possible.png" alt="The World of the Possible" class="full-image">
+            </a>
+        </div>
+    </div>
+
+    <!-- Slide 23: Guardrails -->
+    <div class="slide" id="slide-23">
         <div class="method-nav">
             <strong>Method Deep Dive:</strong> Guardrails
         </div>
@@ -1327,7 +1374,7 @@
         </div>
         <div class="workflow-step">
             <div class="step-number">✓</div>
-            <div><strong>Data Privacy:</strong> Never upload PII without permission</div>
+            <div><strong>Data Privacy:</strong> Never upload personally identifiable information without permission</div>
         </div>
         <div class="workflow-step">
             <div class="step-number">✓</div>
@@ -1343,8 +1390,8 @@
         </div>
     </div>
 
-    <!-- Slide 23: Hands-On Exercise Part 1 -->
-    <div class="slide exercise" id="slide-23">
+    <!-- Slide 24: Hands-On Exercise Part 1 -->
+    <div class="slide exercise" id="slide-24">
         <div class="method-nav">
             <strong>Method Deep Dive:</strong> Let's take a test drive
         </div>
@@ -1375,8 +1422,8 @@
         </p>
     </div>
 
-    <!-- Slide 24: Hands-On Exercise Part 2 -->
-    <div class="slide exercise" id="slide-24">
+    <!-- Slide 25: Hands-On Exercise Part 2 -->
+    <div class="slide exercise" id="slide-25">
         <div class="method-nav">
             <strong>Method Deep Dive:</strong> Let's take a test drive
         </div>
@@ -1408,31 +1455,31 @@
         </div>
     </div>
 
-    <!-- Slide 25: Performance -->
-    <div class="slide framework" id="slide-25">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+    <!-- Slide 26: Performance -->
+    <div class="slide framework" id="slide-26">
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1467,31 +1514,31 @@
         <p style="font-weight: 600; margin-top: 20px;">🎯 <strong>Remember:</strong> You're optimizing for YOUR workflow, not anyone else's!</p>
     </div>
 
-    <!-- Slide 26: Performance Example - Maria -->
-    <div class="slide framework" id="slide-26">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+    <!-- Slide 27: Performance Example - Maria -->
+    <div class="slide framework" id="slide-27">
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1541,31 +1588,31 @@
         <p style="font-weight: 600; margin-top: 20px;">🎆 <strong>Result:</strong> Maria proved value AND saved 34 hours!</p>
     </div>
 
-    <!-- Slide 27: Assessment -->
-    <div class="slide framework" id="slide-27">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+    <!-- Slide 28: Assessment -->
+    <div class="slide framework" id="slide-28">
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1601,31 +1648,31 @@
         <p style="font-weight: 600; margin-top: 20px;">🔁 <strong>Key Insight:</strong> Every cycle makes you more efficient!</p>
     </div>
 
-    <!-- Slide 28: Assessment Example - Maria -->
-    <div class="slide framework" id="slide-28">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+    <!-- Slide 29: Assessment Example - Maria -->
+    <div class="slide framework" id="slide-29">
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1676,31 +1723,31 @@
         <p style="font-weight: 600; margin-top: 20px;">💡 <strong>Maria's Insight:</strong> "I'm not just saving time - I'm doing better work!"</p>
     </div>
 
-    <!-- Slide 29: Share -->
-    <div class="slide framework" id="slide-29">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+    <!-- Slide 30: Share -->
+    <div class="slide framework" id="slide-30">
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1735,31 +1782,31 @@
         <p style="font-weight: 600; margin-top: 20px;">🌐 <strong>Remember:</strong> You're not alone in this journey!</p>
     </div>
     
-    <!-- Slide 30: Share Example - Maria -->
-    <div class="slide framework" id="slide-30">
-        <div class="nav-bar">
-            <div class="nav-step completed">
-                <div class="nav-letter">C</div>
+    <!-- Slide 31: Share Example - Maria -->
+    <div class="slide framework" id="slide-31">
+        <div class="compass-nav">
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">C</div>
                 <span>Context</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">O</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">O</div>
                 <span>Objective</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">M</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">M</div>
                 <span>Method</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">P</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">P</div>
                 <span>Performance</span>
             </div>
-            <div class="nav-step completed">
-                <div class="nav-letter">A</div>
+            <div class="compass-nav-item">
+                <div class="compass-nav-letter">A</div>
                 <span>Assessment</span>
             </div>
-            <div class="nav-step active">
-                <div class="nav-letter">S</div>
+            <div class="compass-nav-item active">
+                <div class="compass-nav-letter">S</div>
                 <span>Share</span>
             </div>
         </div>
@@ -1807,8 +1854,8 @@
         <p style="font-weight: 600; margin-top: 20px;">🌱 <strong>Result:</strong> Maria's next quarter takes only 3 hours thanks to peer tips!</p>
     </div>
     
-    <!-- Slide 31: Next Steps & October Event -->
-    <div class="slide" id="slide-31">
+    <!-- Slide 32: Next Steps & October Event -->
+    <div class="slide" id="slide-32">
         <div class="logo-pledge">
             <img src="branding assets/Pledge 189px.png" alt="Pledge 1%">
         </div>
@@ -1819,11 +1866,11 @@
         
         <div class="demo-box" style="background: linear-gradient(135deg, var(--warm-yellow) 0%, #fff 100%);">
             <div class="demo-title">🗓️ Save the Date: October 16th</div>
-            <p><strong>In-Person Convening at Adobe Offices (Dreamforce Week)</strong></p>
-            <p>• Apply today's learning in real-world scenarios</p>
-            <p>• Network with fellow Builders face-to-face</p>
-            <p>• Advanced workshops and peer mentoring</p>
-            <p>• Showcase your AI implementations</p>
+            <p><strong>In-Person Convening at Adobe's San Francisco Office to explore:</strong></p>
+            <p>• Practical approaches to prepare workers and learners to thrive in an AI economy</p>
+            <p>• Insights from funders and nonprofits on the role corporate support can play in scaling transformative AI solutions across sectors</p>
+            <p>• Proven methods for embedding responsible AI deployment into business and impact strategies</p>
+            <p>• Opportunities to collaborate with peers to amplify collective impact</p>
         </div>
         
         <h3>Between Now and October</h3>
@@ -1849,8 +1896,8 @@
         </p>
     </div>
 
-    <!-- Slide 32: Resources & Support -->
-    <div class="slide" id="slide-32">
+    <!-- Slide 33: Resources & Support -->
+    <div class="slide" id="slide-33">
         <div class="logo-pledge">
             <img src="branding assets/Pledge 189px.png" alt="Pledge 1%">
         </div>
@@ -1882,8 +1929,8 @@
         </div>
     </div>
 
-    <!-- Slide 33: Q&A -->
-    <div class="slide" id="slide-33">
+    <!-- Slide 34: Q&A -->
+    <div class="slide" id="slide-34">
         <div class="logo-pledge">
             <img src="branding assets/Pledge 189px.png" alt="Pledge 1%">
         </div>
@@ -1895,7 +1942,7 @@
             What's your biggest challenge that AI could help solve?
         </p>
         <div class="demo-box">
-            <div class="demo-title">Common Questions We'll Address</div>
+            <div class="demo-title">Common Questions We Address</div>
             <p>• How do I handle sensitive grantee data?</p>
             <p>• What if my company restricts AI tools?</p>
             <p>• How do I show ROI to my leadership?</p>
@@ -1908,8 +1955,8 @@
         </p>
     </div>
 
-    <!-- Slide 34: Thank You -->
-    <div class="slide" id="slide-34">
+    <!-- Slide 35: Thank You -->
+    <div class="slide" id="slide-35">
         <div class="logo-pledge">
             <img src="branding assets/Pledge 189px.png" alt="Pledge 1%">
         </div>
@@ -1946,7 +1993,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 34;
+        const totalSlides = 35;
 
         function showSlide(n) {
             const slides = document.getElementsByClassName('slide');
